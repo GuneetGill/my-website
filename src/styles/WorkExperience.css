@@ -1,0 +1,90 @@
+ /* WorkExperience.css */
+
+.work-experience h1{
+    padding: 20px;
+    align-items: center;
+  }
+  
+  .work-experience-container {
+    display: flex;
+    flex-direction: column;
+    gap: 40px;
+  }
+  
+  .work-experience-item {
+    align-items: center;
+    padding: 20px 0;
+    cursor: pointer;
+  }
+
+  .work-experience-item:hover{
+    transform: scale(1.05);
+  }
+ 
+  .logo-container {
+    margin: 20px;
+    margin-bottom: 5px;
+    display: flex;
+    align-items: center;
+    cursor: pointer; /* Changes cursor on hover to indicate clickability */
+  }
+  
+  .company-logo {
+    width: 250px; /* Makes the logo bigger */
+    height: auto;
+    margin-right: 20px;
+  }
+  
+  .role {
+    font-size: 24px; /* Makes the role text larger */
+    font-weight: bold;
+  }
+  
+  .work-info {
+    display: flex;
+    flex-direction: column;
+
+    margin-top: 10px;
+  }
+
+
+  .work-period {
+    font-size: 16px;
+    color: gray;
+    margin-top: 5px;
+  }
+  
+  .key-responsibilities ul {
+    list-style-type: disc;
+    padding-left: 20px;
+    margin-top: 10px;
+  }
+  
+  .key-responsibilities li {
+    font-size: 14px;
+  }
+  
+  .company-description {
+    font-size: 14px;
+    color: #555;
+    margin-top: 10px;
+  }
+
+
+.dropdown-btn {
+  display: flex;
+  justify-content: center; /* Horizontally center */
+  align-items: center;     /* Vertically center */
+  width: 100%;             /* Ensure it takes full width of the parent container */
+  padding: 5px;            /* Optional: add some padding if needed */
+}
+
+.dropdown-btn-img {
+  width: 15px; 
+  height: 7px; 
+  transition: transform 0.3s ease;
+}
+
+.dropdown-btn-img.flipped {
+  transform: rotate(180deg); /* Flip the image */
+}
