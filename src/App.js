@@ -1,23 +1,32 @@
-import logo from './logo.svg';
-import './App.css';
+import React, { useState, Component } from "react";
+import "./styles/App.css";
+import Header from "./components/Header";
+import LandingPage from "./components/LandingPage";
+import Projects from "./components/Projects";
+import WorkExperience from "./components/WorkExperience";
+import Footer from "./components/Footer";
+import DrawingCanvas from "./components/DrawingCanvas";
+
 
 function App() {
+  // State to store the currently selected brush color
+  const [selectedColor, setSelectedColor] = useState("#000000"); // Default black change this!
+
   return (
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+      <DrawingCanvas selectedColor = {selectedColor}/>
+
+      <div className="main-content">
+        <Header />
+        <LandingPage />
+        <WorkExperience />
+        <Projects />
+      </div>
+
+      <div className="footer">
+        <Footer setColor = {setSelectedColor} />
+      </div>
+
     </div>
   );
 }

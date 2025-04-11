@@ -1,0 +1,32 @@
+.Footer{
+  z-index: 950;
+  position: relative;
+  cursor: pointer;
+}
+
+
+.circle-btn {
+  width: 30px;
+  height: 30px;
+  border-radius: 50%;
+  border: none;
+  margin: 4px;
+  cursor: pointer;
+  z-index: 980;
+}
+
+.red {
+  background-color: #e74c3c;
+}
+
+.blue {
+  background-color: #3498db;
+}
+
+.green {
+  background-color: #2ecc71;
+}
+
+.yellow {
+  background-color: #f39c12;
+}

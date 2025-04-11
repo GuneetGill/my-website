@@ -1,0 +1,16 @@
+.main-content {
+  cursor: url('./pencil.png'), auto;
+  font-family: "Winky Sans", sans-serif;
+  font-weight: 100;
+  margin-bottom: 80px;
+  margin-left: 250px;
+  margin-right: 250px;
+  margin-top: 30px;
+  min-height: 100vh;
+}
+
+.footer {
+  position: fixed;
+  bottom: 0px;
+  margin: 50px;
+}
