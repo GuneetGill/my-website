@@ -15,7 +15,7 @@ function AboutMe() {
         <p>
           When I'm not debugging code, you'll probably find me chasing sunsets in the mountains, skiing down slopes, 
           or getting lost in nature. ☀️❄️⛰️ Curious to know more or just wanna say hi? 
-          My socials are linked below, so feel free to hit me up — I'm always open for a coffee chat. ☕
+          My socials are linked below, so feel free to hit me up, I'm always open for a coffee chat. ☕
         </p>
       </div>
 

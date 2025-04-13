@@ -7,7 +7,7 @@ import WorkExperience from "./components/WorkExperience";
 import Footer from "./components/Footer";
 import DrawingCanvas from "./components/DrawingCanvas";
 import AboutMe from "./components/AboutMe";
-
+import Leadership from "./components/Leadership";
 
 function App() {
   // State to store the currently selected brush color
@@ -22,6 +22,7 @@ function App() {
         <LandingPage />
         <WorkExperience />
         <Projects />
+        <Leadership/>
         <AboutMe/>
       </div>
 

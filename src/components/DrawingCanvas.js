@@ -66,6 +66,41 @@ function DrawingCanvas({selectedColor}) {
     }
   }, [selectedColor]);
 
+  
+
+   // Function to save the drawing as JSON or SVG when the user presses the "S" key
+   const handleKeyDown = (e) => {
+    if (e.key === "s" || e.key === "S") {
+
+    const json = fabricCanvasRef.current.toJSON(); // Get the current drawing as JSON
+
+    // Create a new Blob from the JSON data, specifying the MIME type as 'application/json'
+    const blob = new Blob([JSON.stringify(json, null, 2)], {
+      type: "application/json", // This indicates that it's a JSON file
+    });
+
+    // Create a temporary <a> tag to trigger the download
+    const link = document.createElement("a");
+    link.href = URL.createObjectURL(blob); // Create a URL for the Blob
+    link.download = "drawing.json"; // Specify the filename for the download
+    link.click(); // Programmatically click the link to trigger the download
+
+    }
+  };
+
+  // Add the keydown event listener
+  useEffect(() => {
+    window.addEventListener("keydown", handleKeyDown);
+
+    // Cleanup event listener on unmount
+    return () => {
+      window.removeEventListener("keydown", handleKeyDown);
+    };
+  }, []);
+
+
+
+
   return (
     <div className="Canvas">
       <canvas ref = {canvasRef}> </canvas>
