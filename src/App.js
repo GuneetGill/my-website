@@ -6,6 +6,7 @@ import Projects from "./components/Projects";
 import WorkExperience from "./components/WorkExperience";
 import Footer from "./components/Footer";
 import DrawingCanvas from "./components/DrawingCanvas";
+import AboutMe from "./components/AboutMe";
 
 
 function App() {
@@ -21,6 +22,7 @@ function App() {
         <LandingPage />
         <WorkExperience />
         <Projects />
+        <AboutMe/>
       </div>
 
       <div className="footer">

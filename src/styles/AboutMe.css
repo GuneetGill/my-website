@@ -1,0 +1,30 @@
+.AboutMe {
+    font-size: 0; /* Removes whitespace between inline-block elements */
+}
+
+.paragraphs{
+    padding-bottom: 15px;
+}
+
+.AboutMe p {
+    display: inline-block;
+    vertical-align: top;
+    width: 45%;           /* Make sure they fit side by side */
+    margin: 0 2%;          /* Optional spacing */
+    font-size: 16px;       /* Reset font size after .AboutMe sets it to 0 */
+}
+
+
+.logo{
+    display: inline-block;
+    vertical-align: top;
+    width: 40px; 
+    height: auto;
+    margin-top: 20px;
+    margin-left: 0;
+    margin-right: 30px;
+    position: relative; 
+    z-index: 6;
+    cursor: pointer;
+}
+
