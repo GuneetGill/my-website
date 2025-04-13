@@ -1,11 +1,17 @@
  /* WorkExperience.css */
 
-.work-experience h1{
+ .work-experience {
+  position: relative; 
+  z-index: 4;
+  cursor: pointer;
+}
 
+.work-experience h1{
     align-items: center;
   }
   
   .work-experience-container {
+    z-index: 4;
     display: flex;
     flex-direction: column;
     gap: 40px;

@@ -1,3 +1,9 @@
+.Projects{
+  position: relative;
+  z-index: 50;
+  cursor: pointer;
+}
+
 .project-container {
     display: flex;
     flex-direction: column;

@@ -14,7 +14,7 @@ function App() {
 
   return (
     <div className="App">
-      {/* <DrawingCanvas selectedColor = {selectedColor}/> */}
+      <DrawingCanvas selectedColor = {selectedColor}/>
 
       <div className="main-content">
         <Header />
