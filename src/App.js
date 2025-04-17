@@ -11,14 +11,15 @@ import Leadership from "./components/Leadership";
 
 function App() {
   // State to store the currently selected brush color
-  const [selectedColor, setSelectedColor] = useState("#000000"); // Default black change this!
+  const [selectedColor, setSelectedColor] = useState("#000000"); // Default black
+  const [fabricCanvas, setFabricCanvas] = useState(null);
 
   return (
     <div className="App">
-      <DrawingCanvas selectedColor = {selectedColor}/>
+      <DrawingCanvas selectedColor = {selectedColor} onCanvasReady={setFabricCanvas}/>
 
       <div className="main-content">
-        <Header />
+        <Header fabricCanvas={fabricCanvas}/>
         <LandingPage />
         <WorkExperience />
         <Projects />

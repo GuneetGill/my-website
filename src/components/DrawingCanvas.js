@@ -4,7 +4,7 @@ import * as fabric from "fabric";
 
 //this is the one where u can freehand draw
 
-function DrawingCanvas({selectedColor}) {
+function DrawingCanvas({selectedColor , onCanvasReady }) {
 
   //creates referance of <canvas> element in DOM 
   const canvasRef = useRef(null);
@@ -26,6 +26,11 @@ function DrawingCanvas({selectedColor}) {
 
         // Store the Fabric.js canvas instance in the reference
         fabricCanvasRef.current = fabricCanvas;
+
+        // Pass the canvas reference up to the parent
+        if (onCanvasReady) {
+          onCanvasReady(fabricCanvas);
+        }
 
         // Define the brush used for drawing
         fabricCanvas.freeDrawingBrush = new fabric.PencilBrush(fabricCanvas);
@@ -66,39 +71,36 @@ function DrawingCanvas({selectedColor}) {
     }
   }, [selectedColor]);
 
-  
 
-   // Function to save the drawing as JSON or SVG when the user presses the "S" key
-   const handleKeyDown = (e) => {
-    if (e.key === "s" || e.key === "S") {
+  //  // Function to save the drawing as JSON or SVG when the user presses the "S" key
+  //  const handleKeyDown = (e) => {
+  //   if (e.key === "s" || e.key === "S") {
 
-    const json = fabricCanvasRef.current.toJSON(); // Get the current drawing as JSON
+  //   const json = fabricCanvasRef.current.toJSON(); // Get the current drawing as JSON
 
-    // Create a new Blob from the JSON data, specifying the MIME type as 'application/json'
-    const blob = new Blob([JSON.stringify(json, null, 2)], {
-      type: "application/json", // This indicates that it's a JSON file
-    });
+  //   // Create a new Blob from the JSON data, specifying the MIME type as 'application/json'
+  //   const blob = new Blob([JSON.stringify(json, null, 2)], {
+  //     type: "application/json", // This indicates that it's a JSON file
+  //   });
 
-    // Create a temporary <a> tag to trigger the download
-    const link = document.createElement("a");
-    link.href = URL.createObjectURL(blob); // Create a URL for the Blob
-    link.download = "drawing.json"; // Specify the filename for the download
-    link.click(); // Programmatically click the link to trigger the download
+  //   // Create a temporary <a> tag to trigger the download
+  //   const link = document.createElement("a");
+  //   link.href = URL.createObjectURL(blob); // Create a URL for the Blob
+  //   link.download = "drawing.json"; // Specify the filename for the download
+  //   link.click(); // Programmatically click the link to trigger the download
 
-    }
-  };
+  //   }
+  // };
 
-  // Add the keydown event listener
-  useEffect(() => {
-    window.addEventListener("keydown", handleKeyDown);
+  // // Add the keydown event listener
+  // useEffect(() => {
+  //   window.addEventListener("keydown", handleKeyDown);
 
-    // Cleanup event listener on unmount
-    return () => {
-      window.removeEventListener("keydown", handleKeyDown);
-    };
-  }, []);
-
-
+  //   // Cleanup event listener on unmount
+  //   return () => {
+  //     window.removeEventListener("keydown", handleKeyDown);
+  //   };
+  // }, []);
 
 
   return (
