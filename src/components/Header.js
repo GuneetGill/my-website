@@ -28,52 +28,36 @@ function Header({ fabricCanvas }) {
   const handleChange = (event) => {
     setChecked(event.target.checked);
     console.log("click");
-  
+
     const drawings = [
       drawing0, drawing1, drawing2, drawing3, drawing4,
       drawing5, drawing6, drawing7, drawing8, drawing9,
       drawing10, drawing11, drawing12, drawing13, drawing14,
     ];
-  
-
-    if(!fabricCanvas) return;
-
-    drawings.forEach((drawing, index) => {
-      const delay = Math.random() * 4000;
     
-      setTimeout(() => {
-        console.log(`Loading drawing ${index}`);
-        
-        // Parse and add drawing objects instead of replacing canvas
-        fabric.util.enlivenObjects(drawing.objects, (objects) => {
-          objects.forEach((obj) => {
-            fabricCanvas.add(obj);
-          });
-          fabricCanvas.renderAll();
-          console.log(`Drawing ${index} loaded`);
-        });
-      }, delay);
-    });
-    
-    
-    // drawings.forEach((drawing, index) => {
-    //   const delay = Math.random() * 4000; // random delay between 0 and 4000ms
+    if (!fabricCanvas) return;
 
-    //   setTimeout(() => {
-    //     console.log(`Loading drawing ${index}`);
-    //     fabricCanvas.loadFromJSON(drawing, () => {
-    //       fabricCanvas.renderAll();
-    //       console.log(`Drawing ${index} loaded`);
-    //     });
-    //   }, delay);
-    // });
-  
-    // drawings.forEach((drawing, index) => {
-    //   console.log(drawing)
-    //   fabricCanvas.loadFromJSON(drawing, () => {
-    //       fabricCanvas.renderAll()});
-    // });
+    // Set a consistent delay for all drawings (e.g., 1000ms)
+    const delayTime = 800;
 
+    // Load all drawings with delay between each
+    const animateDrawings = async () => {
+      for (let i = 0; i < drawings.length; i++) {
+        try 
+        {
+          //display item 
+          await fabricCanvas.loadFromJSON(drawings[i]).then((fabricCanvas) => fabricCanvas.renderAll());
+          //add timeout 
+          await new Promise((resolve) => setTimeout(resolve, delayTime));
+        } 
+        catch (error) 
+        {
+          console.error(`Error loading drawing ${i}:`, error);
+        }
+      }
+    };
+
+    animateDrawings()
 
   };
   
@@ -102,18 +86,3 @@ function Header({ fabricCanvas }) {
 
 export default Header;
 
-
-/* 
-his is usually caused by fabricCanvas.renderAll() not triggering a proper repaint, often due to:
-
-Multiple rapid calls to loadFromJSON()
-
-The DOM not updating until an interaction (like scroll or resize)
-
-Fabric.js needing a reflow/refresh
-
-⚠️ 2. You're Overwriting Each Drawing Instead of Stacking Them
-fabricCanvas.loadFromJSON() replaces the entire canvas contents with each drawing.
-
-So instead of "building up" drawings one by one, you're replacing the canvas over and over, and only the last one (with the last delay) will be visible.
-*/
