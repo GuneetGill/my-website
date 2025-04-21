@@ -24,42 +24,56 @@ import drawing14 from "../drawings/drawing14.json";
 function Header({ fabricCanvas }) {
 
   const [checked, setChecked] = useState(true);
+  const cancelRef = useRef(false); 
+
+  const drawings = [
+    drawing0, drawing1, drawing2, drawing3, drawing4,
+    drawing5, drawing6, drawing7, drawing8, drawing9,
+    drawing10, drawing11, drawing12, drawing13, drawing14,
+  ];
+
+  // Set a consistent delay for all drawings (e.g., 1000ms)
+  const delayTime = 800;
+
+  // Load all drawings with delay between each
+  const animateDrawings = async () => {
+    for (let i = 0; i < drawings.length; i++) {
+      if (cancelRef.current) return //cancel animation
+      
+      try 
+      {
+        //display item 
+        await fabricCanvas.loadFromJSON(drawings[i]).then((fabricCanvas) => fabricCanvas.renderAll());
+        //add timeout 
+        await new Promise((resolve) => setTimeout(resolve, delayTime));
+      } 
+      catch (error) 
+      {
+        console.error(`Error loading drawing ${i}:`, error);
+      }
+    }
+  };
 
   const handleChange = (event) => {
     setChecked(event.target.checked);
-    console.log("click");
+    console.log(event.target.checked);
 
-    const drawings = [
-      drawing0, drawing1, drawing2, drawing3, drawing4,
-      drawing5, drawing6, drawing7, drawing8, drawing9,
-      drawing10, drawing11, drawing12, drawing13, drawing14,
-    ];
-    
     if (!fabricCanvas) return;
 
-    // Set a consistent delay for all drawings (e.g., 1000ms)
-    const delayTime = 800;
-
-    // Load all drawings with delay between each
-    const animateDrawings = async () => {
-      for (let i = 0; i < drawings.length; i++) {
-        try 
-        {
-          //display item 
-          await fabricCanvas.loadFromJSON(drawings[i]).then((fabricCanvas) => fabricCanvas.renderAll());
-          //add timeout 
-          await new Promise((resolve) => setTimeout(resolve, delayTime));
-        } 
-        catch (error) 
-        {
-          console.error(`Error loading drawing ${i}:`, error);
-        }
-      }
-    };
-
-    animateDrawings()
-
+    if (event.target.checked){
+      //clear canvas
+      fabricCanvas.clear()
+      cancelRef.current = true;
+      console.log("turn off")
+      return
+    }
+    else{
+      cancelRef.current = false;
+      console.log("turn on")
+      animateDrawings()
+    }
   };
+
   
   return (
     <div className="Header">
