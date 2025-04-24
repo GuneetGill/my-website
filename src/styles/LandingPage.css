@@ -11,3 +11,17 @@ img {
   width: 500px; /* You can adjust the image size as needed */
   height: 500px;
 }
+
+.text-container a{
+  position: relative; 
+  z-index: 10;
+  cursor: pointer;
+  color: #333; /* or any color you like (e.g. #555, #222, etc.) */
+  text-decoration: none; /* keeps the underline */
+  font-weight: 500;
+}
+
+.text-container a:hover {
+  color: #1153ee;
+  text-decoration: underline;
+}

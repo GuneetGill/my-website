@@ -32,24 +32,24 @@
     margin-bottom: 5px;
     display: flex;
     align-items: center;
-    cursor: pointer; /* Changes cursor on hover to indicate clickability */
+    cursor: pointer; 
   }
   
   .company-logo {
-    width: 250px; /* Makes the logo bigger */
+    width: 250px; 
     height: auto;
     margin-right: 20px;
   }
   
   .role {
-    font-size: 24px; /* Makes the role text larger */
+    font-size: 24px;
     font-weight: bold;
   }
   
   .work-info {
     display: flex;
     flex-direction: column;
-
+    margin:35px;
     margin-top: 10px;
   }
 

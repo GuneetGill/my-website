@@ -10,8 +10,27 @@ function LandingPage() {
           to build applications.
         </h1>
         <p>
-          Check out my Linkedin, Github or click here to download a copy of my
-          resume!
+          Check out my{" "}
+          <a
+            href="https://linkedin.com/in/guneet-gill"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            LinkedIn
+          </a>
+          ,{" "}
+          <a
+            href="https://github.com/GuneetGill"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            GitHub
+          </a>{" "}
+          or{" "}
+          <a href="/files/guneet-gill-resume.pdf" download>
+            click here
+          </a>{" "}
+          to download a copy of my resume!
         </p>
       </div>
       <img src="/images/my-drawing.png" alt="Description of image" />

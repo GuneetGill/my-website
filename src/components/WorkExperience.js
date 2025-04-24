@@ -47,7 +47,7 @@ function WorkExperience() {
           </div>
           {activeIndices.includes(0) && (
             <div className="work-info">
-              <p className="work-period">May 2025 - Present</p>
+              <p className="work-period"> ⏳  May 2025 - Present</p>
               <div className="key-responsibilities">
                 <ul>
                   <li>
@@ -87,7 +87,7 @@ function WorkExperience() {
           </div>
           {activeIndices.includes(1) && (
             <div className="work-info">
-              <p className="work-period">Jan 2025 - April 2025</p>
+              <p className="work-period">⏳ Jan 2025 - April 2025</p>
               <div className="key-responsibilities">
                 <ul>
                   <li>
@@ -140,7 +140,7 @@ function WorkExperience() {
           </div>
           {activeIndices.includes(2) && (
             <div className="work-info">
-              <p className="work-period">May 2021 - August 2022</p>
+              <p className="work-period">⏳ May 2021 - August 2022</p>
               <div className="key-responsibilities">
                 <ul>
                   <li>
