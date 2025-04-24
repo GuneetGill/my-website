@@ -48,13 +48,3 @@ export default AboutMe;
 
 
 
-
-//   <p>
-//   Hey there! I'm Guneet, a Computer Science & Business student in my final year at Simon Fraser University.
-//   When I'm not debugging code you'll probably find me chasing sunsets in the mountains, skiing down slopes, 
-//   or getting lost (on purpose) in nature. If it's outdoors, I'm in. ☀️❄️⛰️
-// </p>
-// <p>
-//   This little corner of the internet is my digital playground, and I'm stoked you stopped by. 
-//   My socials are just a scroll away, hit me up if you want to chat, collab, or grab a coffee. Let's connect!
-// </p>

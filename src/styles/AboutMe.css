@@ -14,6 +14,20 @@
     font-size: 16px;       /* Reset font size after .AboutMe sets it to 0 */
 }
 
+/* .logo-collection {
+    display: flex;
+    align-items: center; 
+    gap: 30px;          
+    margin-top: 20px;   
+}
+
+.logo {
+    width: 40px;
+    height: auto;
+    cursor: pointer;
+    z-index: 6;
+} */
+
 
 .logo{
     display: inline-block;
@@ -26,5 +40,5 @@
     position: relative; 
     z-index: 6;
     cursor: pointer;
-}
-
+} 
+ 

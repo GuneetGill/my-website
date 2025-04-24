@@ -1,0 +1,28 @@
+
+
+/* make the two club cards sit in a row */
+.clubs-list {
+    display: flex;
+    gap: 2rem;          /* space between cards */
+    flex-wrap: wrap;    /* wrap on smaller screens */
+  }
+  
+  /* allow each card to grow/shrink */
+  .club {
+    flex: 1 1 300px;    /* base width 300px, but can grow/shrink */
+    box-sizing: border-box;
+  }
+  
+.logo {
+    margin: 20px;
+    margin-bottom: 5px;
+    display: flex;
+    align-items: center;
+    cursor: pointer; /* Changes cursor on hover to indicate clickability */
+  }
+  
+  .club-logo {
+    width: 100px; /* Makes the logo bigger */
+    height: auto;
+    margin-right: 20px;
+  }
