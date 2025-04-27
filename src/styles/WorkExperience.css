@@ -1,5 +1,6 @@
  /* WorkExperience.css */
 
+ /* bigger container with everuthing  */
  .work-experience {
   position: relative; 
   z-index: 4;
@@ -26,6 +27,8 @@
   .work-experience-item:hover{
     transform: scale(1.05);
   }
+
+  /* one item in the bigger box */
  
   .logo-container {
     margin: 20px;
@@ -46,6 +49,7 @@
     font-weight: bold;
   }
   
+  /* the item that contains all the work stuff that is sometimes hidden */
   .work-info {
     display: flex;
     flex-direction: column;
@@ -77,6 +81,7 @@
   }
 
 
+  /* the button for dropping down  */
 .dropdown-btn {
   display: flex;
   justify-content: center; /* Horizontally center */
