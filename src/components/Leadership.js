@@ -1,24 +1,65 @@
 import "../styles/Leadership.css";
+import React, { useState } from "react";
 
 function Leadership() {
+
+    // Track the open/close state of each item with an array
+    // intilize with empty array since no sections are open by default
+    const [activeIndices, setActiveIndices] = useState([]);
+  
+    const toggleDetails = (index) => {
+      if (activeIndices.includes(index)) {
+        // If the index is already in the array, remove it to close the section
+        setActiveIndices(activeIndices.filter((i) => i !== index));
+      } else {
+        // Otherwise, add it to the array to open the section
+        setActiveIndices([...activeIndices, index]);
+      }
+    };
+
+
   return (
     <div className="Leadership">
-      <div clasName = "section-heading">
+      <div className = "section-heading">
       <h1>Leadership</h1>
       </div>
       
       <div className="clubs-list">
 
-        <div className="club">
-          <div className = "logo">
+      <div className="club">
+
+      <div className="visable-container" onClick={() => toggleDetails(0)}>
+       
+          <div className = "logo-container-club">
           <img
               src="images/student-energy-logo.jpeg"
               alt="student energy logo"
               className="club-logo"
             />
           </div>
-          <h3>Student Energy at SFU</h3>
-          <div className="role">Director of Finance</div>
+          <div className="club-role">Director of Finance</div>
+          <div className="club-name"><p>Student Energy at SFU</p></div>
+       
+
+          <div className="dropdown-btn">
+            <img
+              src="images/logo2.png"
+              alt="dropdown button"
+              //appiles javascript so first we check if the the key for this div aka 0
+              // is within the activeIndex array if it is then we apply the css class
+              // flipeed otherwise we apply "" class which is nothing
+              className={`dropdown-btn-img ${
+                activeIndices.includes(0) ? "flipped" : ""
+              }`}
+            />
+          </div>
+
+        </div>
+
+
+
+          {activeIndices.includes(0) && (
+          <div className = "hidden-info">
           <div className="duration">March 2021 - June 2023</div>
           <p className="organization-desc">
             Student Energy is a global youth-led organization empowering the next generation of leaders to accelerate
@@ -29,18 +70,44 @@ function Leadership() {
             <li>Managed operational financial tasks, including reimbursements and grant applications.</li>
             <li>Demonstrated leadership by overseeing budget allocation and financial reporting.</li>
           </ul>
+          </div>
+        )}
+
+
         </div>
 
         <div className="club">
-        <div className = "logo">
+
+        <div className="visable-container" onClick={() => toggleDetails(1)}>
+        <div className = "logo-container-club">
           <img
               src="images/sma-logo.jpeg"
               alt="sma logo"
               className="club-logo"
             />
           </div>
-          <h3>Student Marketing Association at SFU</h3>
-          <div className="role">Business Development Coordinator</div>
+          <div className="club-role">Business Development Coordinator</div>
+           <div className="club-name"><p>Student Marketing Association at SFU</p></div>
+         
+          <div className="dropdown-btn">
+            <img
+              src="images/logo2.png"
+              alt="dropdown button"
+              //appiles javascript so first we check if the the key for this div aka 0
+              // is within the activeIndex array if it is then we apply the css class
+              // flipeed otherwise we apply "" class which is nothing
+              className={`dropdown-btn-img ${
+                activeIndices.includes(1) ? "flipped" : ""
+              }`}
+            />
+          </div>
+
+          </div>
+
+          
+
+          {activeIndices.includes(1) && (
+        <div className = "hidden-info">
           <div className="duration">July 2020 - April 2021</div>
           <p className="organization-desc">
             SFU Student Marketing Association bridges the gap between students and the marketing industry by 
@@ -51,6 +118,8 @@ function Leadership() {
             <li>Developed and delivered engaging presentations to students.</li>
             <li>Enhanced written and verbal communication through outreach campaigns.</li>
           </ul>
+        </div>
+          )}
         </div>
 
       </div>
