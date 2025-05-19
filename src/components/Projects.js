@@ -6,53 +6,61 @@ function Projects() {
 
   const toggleDetails = (index) => {
     setActiveIndices((prev) =>
-      prev.includes(index)
-        ? prev.filter((i) => i !== index)
-        : [...prev, index]
+      prev.includes(index) ? prev.filter((i) => i !== index) : [...prev, index]
     );
   };
 
-
-const projectData = [
-  {
-    title: "Rate My Prof API/Chrome Extension",
-    summary:
-      "An API for RateMyProfessors and a Chrome extension that assists students in selecting courses.",
-    timePeriod: "January - April 2025",
-    details: [
-      "Collected data by web scraping RateMyProfessors and stored it in an AWS RDS database.",
-      "Developed an API to present this data to users in a clean, accessible format.",
-      "Built a Chrome extension to display professor ratings directly on the SFU course selection site.",
-    ],
-    skills: [
-      "AWS Lambda",
-      "Python",
-      "AWS RDS",
-      "AWS ECR",
-      "Docker",
-      "JavaScript",
-      "Beautiful Soup",
-      "Selenium",
-    ],
-    image: "test-images.png",
-    link: "https://github.com/GuneetGill/RateMyProf-API",
-  },
-  {
-    title: "Eco GPT 🏆",
-    summary:
-      "A Chrome extension to reduce ChatGPT usage and promote sustainability. ",
-    timePeriod: "January - April 2025",
-    details: [
-      "Won Redbrick’s Impact Challenge Sponsor Prize at NW Hacks Cmd-f 2025.",
-      "Reminds users of AI’s environmental impact and promotes alternatives.",
-      "Developed a custom ML model to classify queries as simple/complex.",
-    ],
-    skills: ["GraphQL", "Python", "Cloud Hosting", "Machine Learning", "JavaScript"],
-    image: "test-images.png",
-    link: "https://github.com/GuneetGill/cmd-f-2025",
-    devpostLink: "https://devpost.com/software/ecogpt?_gl=1*15h52el*_gcl_au*MTQwODQyMjE4MC4xNzQ1NDcwMTgw*_ga*MTE2NjI3NjEzNC4xNzQ1NDcwMTgx*_ga_0YHJK3Y10M*MTc0NTc4Nzg3My4zLjEuMTc0NTc4NzkxMC4wLjAuMA.."
-  },
-
+  const projectData = [
+    {
+      title: "Rate My Prof API/Chrome Extension",
+      summary:
+        "An API for RateMyProfessors and a Chrome extension that assists students in selecting courses.",
+      timePeriod: "January - April 2025",
+      details: [
+        "Scraped professor rating data from RateMyProfessors and stored it in an AWS RDS PostgreSQL database.",
+        "Designed and deployed a RESTful API using AWS API Gateway to serve database content in a user-friendly format.",
+        "Developed a Chrome extension that integrates with the SFU course selection site to display professor ratings directly to students.",
+        "The Chrome extension interacts with a backend AWS Lambda function, connected to API Gateway within a private VPC, to retrieve and serve rating data.",
+        "Containerized the backend using Docker and deployed the image to AWS ECR, which was then used by the Lambda function. Infrastructure was provisioned using AWS CDK for full automation.",
+      ],
+      skills: [
+        "AWS Lambda",
+        "Python",
+        "AWS RDS",
+        "AWS ECR",
+        "Docker",
+        "JavaScript",
+        "Beautiful Soup",
+        "Selenium",
+      ],
+      logoImage: "test-images.png",
+      images: "images/test.png",
+      link: "https://github.com/GuneetGill/RateMyProf-API",
+    },
+    {
+      title: "Eco GPT 🏆",
+      summary:
+        "A Chrome extension to reduce ChatGPT usage and promote sustainability. ",
+      timePeriod: "January - April 2025",
+      details: [
+        "Won Redbrick's Impact Challenge Sponsor Prize at NW Hacks Cmd-f 2025.",
+        "Built a machine learning algorithm using natural language processing (NLP) to classify user prompts as either simple or complex, triggering tailored responses.",
+        "Designed to raise awareness of the environmental impact of AI usage by encouraging sustainable alternatives like Google Search.",
+        "Developed a custom ML model to classify queries as simple/complex.",
+      ],
+      skills: [
+        "GraphQL",
+        "Python",
+        "Cloud Hosting",
+        "Machine Learning",
+        "JavaScript",
+      ],
+      logoImage: "/images/eco-gpt-ss.png",
+      images: "images/test.png",
+      link: "https://github.com/GuneetGill/cmd-f-2025",
+      devpostLink:
+        "https://devpost.com/software/ecogpt?_gl=1*15h52el*_gcl_au*MTQwODQyMjE4MC4xNzQ1NDcwMTgw*_ga*MTE2NjI3NjEzNC4xNzQ1NDcwMTgx*_ga_0YHJK3Y10M*MTc0NTc4Nzg3My4zLjEuMTc0NTc4NzkxMC4wLjAuMA..",
+    },
     {
       title: "Memory Haven",
       summary:
@@ -73,9 +81,10 @@ const projectData = [
         "Beautiful Soup",
         "Selenium",
       ],
-      image: "test-images.png",
+      logoImage: "images/memory-haven-ss.png",
+      images: "images/test.png",
       link: "https://github.com/GuneetGill/MemoryHaven",
-      youtubeLink: "https://youtu.be/UUUruiFl3Rs"
+      youtubeLink: "https://youtu.be/UUUruiFl3Rs",
     },
     {
       title: "Travelouge",
@@ -94,9 +103,10 @@ const projectData = [
         "Speech-to-Text",
         "Biometric Authentication",
       ],
-      image: "test-images.png",
+      logoImage: "images/travel-ss.png",
+      images: "images/test.png",
       link: "https://github.com/GuneetGill/Travelouge",
-      youtubeLink: "https://youtu.be/tKQViz3dEcU"
+      youtubeLink: "https://youtu.be/tKQViz3dEcU",
     },
     {
       title: "Moodify",
@@ -107,15 +117,9 @@ const projectData = [
         "Using the Spotify API, analyzed user's listening history to predict mood.",
         "Added mood suggestions for user's playlist.",
       ],
-      skills: [
-        "Flask",
-        "Python",
-        "JavaScript",
-        "HTML",
-        "CSS",
-        "OAuth 2.0",
-      ],
-      image: "test-images.png",
+      skills: ["Flask", "Python", "JavaScript", "HTML", "CSS", "OAuth 2.0"],
+      logoImage: "/images/moodify-ss.png",
+      images: "images/test.png",
       link: "https://github.com/GuneetGill/Moodify",
     },
     {
@@ -129,7 +133,8 @@ const projectData = [
         "Utilized evolutionary approach which allowed AI to continuously improve over time.",
       ],
       skills: ["Pygame", "Python", "Neural Networks", "Numpy"],
-      image: "test-images.png",
+      logoImage: "test-images.png",
+      images: "images/test.png",
       link: "https://github.com/GuneetGill/Flappy_Bird_NN",
     },
     {
@@ -141,7 +146,8 @@ const projectData = [
         "Utilized logistic regression, linear regression and other models to compare and find best model to predict what type of cancer tumor is being shown.",
       ],
       skills: ["Machine Learning", "Python"],
-      image: "test-images.png",
+      logoImage: "test-images.png",
+      images: "images/test.png",
       link: "https://github.com/GuneetGill/Breast_Cancer_Prediction",
     },
     {
@@ -153,9 +159,10 @@ const projectData = [
         "Developed professional and responsive website for a local business to enhance their online presence.",
       ],
       skills: ["CSS", "HTML", "JavaScript"],
-      image: "test-images.png",
+      logoImage: "/images/final-touch-ss.png",
+      images: "images/test.png",
       link: "https://github.com/GuneetGill/final_touch_finishing",
-      websiteLink: "www.finaltouchfinishing.ca"
+      websiteLink: "www.finaltouchfinishing.ca",
     },
     {
       title: "Forex Prediction Model",
@@ -169,7 +176,8 @@ const projectData = [
         "Collected market sentiment, headlines, and economic data using real-time web scraping, and displayed data onto web application to provide comprehensive view of trading activities.",
       ],
       skills: ["Python", "Pandas", "Beautiful Soup", "Flask", "React"],
-      image: "test-images.png",
+      logoImage: "/images/forex-ss.png",
+      images: "images/test.png",
       link: "https://github.com/GuneetGill/Forex_Project",
     },
   ];
@@ -177,14 +185,17 @@ const projectData = [
     <div className="Projects">
       <h1>Projects</h1>
       <div className="project-container">
-  
         {projectData.map((project, index) => (
           <React.Fragment key={index}>
             <div className="project-item" onClick={() => toggleDetails(index)}>
-              <div className="project-img">
-                <img src={project.image} alt="img" />
+              <div className="project-img-div">
+                <img
+                  className="project-img"
+                  src={project.logoImage}
+                  alt="img"
+                />
               </div>
-  
+
               <div className="project-info">
                 <div className="project-title">
                   <h3>{project.title}</h3>
@@ -193,21 +204,23 @@ const projectData = [
                   <p>{project.summary}</p>
                 </div>
               </div>
-  
+
               <div className="dropdown-btn-project">
                 <img
                   src="images/logo2.png"
                   alt="dropdown button"
-                  className={`dropdown-btn-img ${activeIndices.includes(index) ? "flipped" : ""}`}
+                  className={`dropdown-btn-img ${
+                    activeIndices.includes(index) ? "flipped" : ""
+                  }`}
                 />
               </div>
             </div>
-  
+
             {/* Moved OUTSIDE of .project-item */}
             {activeIndices.includes(index) && (
               <div className="project-info-hidden">
                 <p className="time-period">{project.timePeriod}</p>
-  
+
                 <div className="project-description">
                   <ul>
                     {project.details.map((point, i) => (
@@ -215,13 +228,13 @@ const projectData = [
                     ))}
                   </ul>
                 </div>
-  
+
                 <div className="skills-tag">
                   {project.skills.map((skill, i) => (
                     <p key={i}>{skill}</p>
                   ))}
                 </div>
-  
+
                 <div className="project-imgs">
                   <img
                     className="project-logo"
@@ -229,41 +242,68 @@ const projectData = [
                     alt="Screenshot of the project interface"
                   />
                 </div>
-  
-               
-                  <div className="links-section">
-                    {project.link && (
-                        <a href={project.link} target="_blank" rel="noopener noreferrer">
-                          <img src="/images/github-logo.png" alt="GitHub logo" className="logo" />
-                        </a>
-                      )}
-                      {project.youtubeLink && (
-                        <a href={project.youtubeLink} target="_blank" rel="noopener noreferrer">
-                          <img src="/images/youtube-logo.png" alt="YouTube logo" className="logo" />
-                        </a>
-                      )}
-                        {project.devpostLink && (
-                        <a href={project.devpostLink} target="_blank" rel="noopener noreferrer">
-                          <img src="/images/devpost-logo.png" alt="Devpost logo" className="logo" />
-                        </a>
-                      )}
-                          {project.websiteLink && (
-                        <a href={project.websiteLink} target="_blank" rel="noopener noreferrer">
-                          <img src="/images/website-logo.png" alt="website logo" className="logo" />
-                        </a>
-                      )}
-                  </div>
-              
+
+                <div className="links-section">
+                  {project.link && (
+                    <a
+                      href={project.link}
+                      target="_blank"
+                      rel="noopener noreferrer"
+                    >
+                      <img
+                        src="/images/github-logo.png"
+                        alt="GitHub logo"
+                        className="logo"
+                      />
+                    </a>
+                  )}
+                  {project.youtubeLink && (
+                    <a
+                      href={project.youtubeLink}
+                      target="_blank"
+                      rel="noopener noreferrer"
+                    >
+                      <img
+                        src="/images/youtube-logo.png"
+                        alt="YouTube logo"
+                        className="logo"
+                      />
+                    </a>
+                  )}
+                  {project.devpostLink && (
+                    <a
+                      href={project.devpostLink}
+                      target="_blank"
+                      rel="noopener noreferrer"
+                    >
+                      <img
+                        src="/images/devpost-logo.png"
+                        alt="Devpost logo"
+                        className="logo"
+                      />
+                    </a>
+                  )}
+                  {project.websiteLink && (
+                    <a
+                      href={project.websiteLink}
+                      target="_blank"
+                      rel="noopener noreferrer"
+                    >
+                      <img
+                        src="/images/website-logo.png"
+                        alt="website logo"
+                        className="logo"
+                      />
+                    </a>
+                  )}
+                </div>
               </div>
-              
             )}
           </React.Fragment>
         ))}
-  
       </div>
     </div>
   );
-  }
-  
-  export default Projects;
-  
+}
+
+export default Projects;

@@ -66,11 +66,14 @@ function Leadership() {
              the transition to a sustainable, equitable energy future.
           </p>
           <ul>
-            <li>Collaborated with executive members to identify external funding opportunities.</li>
-            <li>Managed operational financial tasks, including reimbursements and grant applications.</li>
-            <li>Demonstrated leadership by overseeing budget allocation and financial reporting.</li>
-          </ul>
-          </div>
+  <li>Collaborated with executive members to identify external funding opportunities.</li>
+  <li>Managed operational financial tasks, including reimbursements and grant applications.</li>
+  <li>Demonstrated leadership by overseeing budget allocation and financial reporting.</li>
+  <li>Helped in the organization and delivery of events such as Professor of the Semester,
+      student networking events, skills building workshops and much more.
+  </li>
+</ul>
+         </div>
         )}
 
 
@@ -114,10 +117,14 @@ function Leadership() {
             providing hands-on project experience and industry networking opportunities.
           </p>
           <ul>
-            <li>Networked with industry professionals to secure speakers for marketing workshops.</li>
-            <li>Developed and delivered engaging presentations to students.</li>
-            <li>Enhanced written and verbal communication through outreach campaigns.</li>
-          </ul>
+  <li>Helped organize and run the REACH program, which is a semester-long program connecting 
+      SFU Students with local businesses, providing them with the opportunity to gain hands-on 
+      marketing experience.</li>
+  <li>Networked with industry professionals to secure speakers for marketing workshops.</li>
+  <li>Developed and delivered engaging presentations to students.</li>
+  <li>Collaborated with other organizers to deliver weekly workshops to students</li>
+</ul>
+
         </div>
           )}
         </div>
