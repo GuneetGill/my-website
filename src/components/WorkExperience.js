@@ -51,7 +51,7 @@ function WorkExperience() {
               <div className="key-responsibilities">
                 <ul>
                   <li>
-                    I will be working with the Financials Global Extentions team
+                    I will be working with the Financials Global Extend Team
                   </li>
                 </ul>
               </div>
@@ -101,8 +101,7 @@ function WorkExperience() {
                     delivery.
                   </li>
                   <li>
-                    Wrote unit tests and integrated continuous integration (CI)
-                    pipelines for smooth deployment processes.
+                  Prototyped a simple PDF-reading assistant using OpenAI's Swarm library to provide contextual help while reading.
                   </li>
                 </ul>
               </div>

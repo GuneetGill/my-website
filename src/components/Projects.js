@@ -12,10 +12,10 @@ function Projects() {
 
   const projectData = [
     {
-      title: "Rate My Prof API/Chrome Extension",
+      title: "Rate My Prof API/Chrome Extension - In Progress",
       summary:
         "An API for RateMyProfessors and a Chrome extension that assists students in selecting courses.",
-      timePeriod: "January - April 2025",
+      timePeriod: "January - current",
       details: [
         "Scraped professor rating data from RateMyProfessors and stored it in an AWS RDS PostgreSQL database.",
         "Designed and deployed a RESTful API using AWS API Gateway to serve database content in a user-friendly format.",
@@ -33,15 +33,15 @@ function Projects() {
         "Beautiful Soup",
         "Selenium",
       ],
-      logoImage: "test-images.png",
-      images: "images/test.png",
+      logoImage: "/images/rmp-thumbnail.png",
+      images: "",
       link: "https://github.com/GuneetGill/RateMyProf-API",
     },
     {
-      title: "Eco GPT 🏆",
+      title: "Eco GPT 🏆 Cmd-f sponser prize winner",
       summary:
         "A Chrome extension to reduce ChatGPT usage and promote sustainability. ",
-      timePeriod: "January - April 2025",
+      timePeriod: "March 9, 2025",
       details: [
         "Won Redbrick's Impact Challenge Sponsor Prize at NW Hacks Cmd-f 2025.",
         "Built a machine learning algorithm using natural language processing (NLP) to classify user prompts as either simple or complex, triggering tailored responses.",
@@ -55,8 +55,8 @@ function Projects() {
         "Machine Learning",
         "JavaScript",
       ],
-      logoImage: "/images/eco-gpt-ss.png",
-      images: "images/test.png",
+      logoImage: "/images/eco-gpt-thumbnail.png",
+      images: "",
       link: "https://github.com/GuneetGill/cmd-f-2025",
       devpostLink:
         "https://devpost.com/software/ecogpt?_gl=1*15h52el*_gcl_au*MTQwODQyMjE4MC4xNzQ1NDcwMTgw*_ga*MTE2NjI3NjEzNC4xNzQ1NDcwMTgx*_ga_0YHJK3Y10M*MTc0NTc4Nzg3My4zLjEuMTc0NTc4NzkxMC4wLjAuMA..",
@@ -64,106 +64,144 @@ function Projects() {
     {
       title: "Memory Haven",
       summary:
-        "An Android app that supports dementia patients through reminiscence therapy.",
-      timePeriod: "January - April 2025",
+        "An Android application that supports dementia patients through reminiscence therapy by enabling curated multimedia sharing from loved ones.",
+      timePeriod: "September - December 2024",
       details: [
-        "Collected data by web scraping RateMyProfessors and stored it in an AWS RDS database.",
-        "Developed a website to present this data to users in a clean, accessible format.",
-        "Built a Chrome extension using a custom API to display professor ratings directly on the SFU course selection site.",
+        "Built an intuitive Android application using Android Studio to assist dementia patients in memory recall through photos and audio from their loved ones.",
+        "Implemented secure authentication and role-based UI using Firebase Authentication to support both patients and caregivers/family logins.",
+        "Designed and integrated Firebase Realtime Database for storing user-generated content (images, audio, descriptions, tags) and tracking memory response ratings.",
+        "Created a dynamic daily feed that refreshes with curated media, incorporating new uploads or randomly selected archived content.",
+        "Developed archive browsing functionality with chronological sorting and keyword search for memory recall.",
+        "Implemented data visualization for memory response ratings over time to assist caregivers and medical professionals in monitoring cognitive trends.",
       ],
       skills: [
-        "AWS Lambda",
-        "Python",
-        "AWS RDS",
-        "AWS ECR",
-        "Docker",
-        "JavaScript",
-        "Beautiful Soup",
-        "Selenium",
+        "Android Studio",
+        "Java",
+        "Firebase Authentication",
+        "Firebase Realtime Database",
+        "Firebase Storage",
+        "XML",
+        "Data Visualization",
+        "Agile Development",
       ],
-      logoImage: "images/memory-haven-ss.png",
-      images: "images/test.png",
+      logoImage: "images/memory-haven-thumbnail.png",
+      images: "",
       link: "https://github.com/GuneetGill/MemoryHaven",
       youtubeLink: "https://youtu.be/UUUruiFl3Rs",
     },
     {
       title: "Travelouge",
       summary:
-        "A travel journaling Android app that lets users document their experiences.",
-      timePeriod: "January - April 2025",
+        "A travel journaling Android app that simplifies documenting, organizing, and preserving travel memories through interactive maps, multimedia, and secure storage.",
+        timePeriod: "September - December 2024",
       details: [
-        "Your personal digital scrapbook where users can store personalized journals and multimedia from their travels.",
-        "Visualize all visited locations using world map and add pins for destinations visited.",
-        "Log expenses and track spending for travel and store travel documents within folders.",
+        "Developed an Android application that serves as a digital scrapbook, enabling users to create detailed travel journals with multimedia content such as photos, videos, and voice recordings.",
+        "Integrated Firebase Authentication to provide secure and role-based user access, ensuring personal content is protected.",
+        "Implemented Google Maps Places API to allow users to add interactive pins to a world map and visualize all their visited destinations.",
+        "Designed and built a trip-based expense tracker with visual summaries to help users manage and review their spending habits.",
+        "Created a biometric-authenticated document folder for safely storing sensitive travel files like passports, itineraries, and tickets.",
+        "Enabled users to plan future adventures with a built-in bucket list feature to organize dream destinations",
+        "Utilized speech-to-text functionality to allow voice journaling, enhancing accessibility and ease of memory recording.",
       ],
       skills: [
         "Kotlin",
+        "Android Studio",
         "Firebase Authentication",
         "Google Maps Places API",
         "Speech-to-Text",
         "Biometric Authentication",
+        "Agile Development"
       ],
-      logoImage: "images/travel-ss.png",
-      images: "images/test.png",
+      logoImage: "images/travel-thumbnail.png",
+      images: "",
       link: "https://github.com/GuneetGill/Travelouge",
       youtubeLink: "https://youtu.be/tKQViz3dEcU",
-    },
+    },    
     {
       title: "Moodify",
       summary:
-        "A website that predicts user mood based on recent Spotify listening history.",
-      timePeriod: "January - April 2025",
+        "A dynamic web application that analyzes your Spotify listening history to predict mood and provide playlist insights.",
+      timePeriod: "May - July 2024",
       details: [
-        "Using the Spotify API, analyzed user's listening history to predict mood.",
-        "Added mood suggestions for user's playlist.",
+        "Developed a mood prediction system by analyzing recently played tracks using the Spotify API and the Spotipy Python library.",
+        "Implemented playlist analysis to detect and suggest the overall mood of user playlists.",
+        "Utilized OAuth 2.0 for secure and seamless authentication with Spotify accounts.",
+        "Designed a modern, responsive interface to ensure accessibility and an engaging user experience across devices.",
+        "Built the application using Flask for backend routing and Python for data processing, with a front-end developed in HTML, CSS, and JavaScript.",
       ],
-      skills: ["Flask", "Python", "JavaScript", "HTML", "CSS", "OAuth 2.0"],
-      logoImage: "/images/moodify-ss.png",
-      images: "images/test.png",
-      link: "https://github.com/GuneetGill/Moodify",
-    },
+      skills: [
+        "Spotify API",
+        "OAuth 2.0",
+        "Flask",
+        "Python",
+        "JavaScript",
+        "HTML",
+        "CSS"
+      ],
+      logoImage: "/images/moodify-thumbnail.png",
+      images: "",
+      link: "https://github.com/GuneetGill/Moodify"
+    },    
     {
       title: "Flappy Bird AI",
       summary:
-        "A self-playing Flappy Bird game powered by a neural network model.",
-      timePeriod: "January - April 2025",
+        "A self-learning version of Flappy Bird powered by a neural network that evolves over time to master the game autonomously.",
+      timePeriod: "June - July 2024",
       details: [
-        "Created neural network model with an input layer, hidden layer and output layer.",
-        "Neural network helped AI improve its performance over time by training itself and learning to navigate better.",
-        "Utilized evolutionary approach which allowed AI to continuously improve over time.",
+        "Recreated the classic Flappy Bird game using Python and Pygame with an integrated AI component.",
+        "Designed and implemented a neural network model with 2 input nodes, 1 hidden layer with 5 sigmoid-activated nodes, and 1 output node.",
+        "Trained the AI using an evolutionary algorithm: birds were evaluated based on survival time and proximity to pipe gaps, with top performers breeding new generations.",
+        "Leveraged NumPy for efficient vectorized computations and matrix operations critical to neural network training.",
       ],
-      skills: ["Pygame", "Python", "Neural Networks", "Numpy"],
-      logoImage: "test-images.png",
-      images: "images/test.png",
-      link: "https://github.com/GuneetGill/Flappy_Bird_NN",
-    },
+      skills: [
+        "Python",
+        "Pygame",
+        "Neural Networks",
+        "NumPy"
+      ],
+      logoImage: "/images/flappy-bird-thumbnail.png",
+      images: "",
+      link: "https://github.com/GuneetGill/Flappy_Bird_NN"
+    },    
     {
       title: "Breast Cancer Prediction Model",
       summary:
-        "A machine learning model developed to predict malignant or benign breast cancer.",
-      timePeriod: "January - April 2025",
+        "A machine learning project focused on accurately classifying breast cancer tumors as benign or malignant using clinical data.",
+      timePeriod: "Sept - Nov 2024",
       details: [
-        "Utilized logistic regression, linear regression and other models to compare and find best model to predict what type of cancer tumor is being shown.",
+        "Developed and evaluated multiple classification models—including logistic regression, linear regression, and decision trees—to identify the most effective algorithm for tumor classification.",
+        "Performed data preprocessing steps including normalization, feature selection, and handling missing values to improve model accuracy.",
+        "Utilized scikit-learn and pandas for streamlined data manipulation, model training, and evaluation.",
+        "Achieved high prediction accuracy on test data, supporting decision-making with interpretable results."
       ],
-      skills: ["Machine Learning", "Python"],
-      logoImage: "test-images.png",
-      images: "images/test.png",
-      link: "https://github.com/GuneetGill/Breast_Cancer_Prediction",
-    },
+      skills: [
+        "Machine Learning",
+        "Python",
+        "Scikit-learn",
+        "Pandas",
+        "Logistic Regression",
+        "Data Analysis"
+      ],
+      logoImage: "/images/breast-cancer-thumbnail.png",
+      images: "",
+      link: "https://github.com/GuneetGill/Breast_Cancer_Prediction"
+    },    
     {
       title: "Final Touch Finishing Website",
       summary:
-        "Website for a local business aimed to showcase services and attract clients.",
-      timePeriod: "January - April 2025",
+        "A professional website developed for a local finishing business to showcase services, increase customer engagement, and boost online visibility.",
+      timePeriod: "April - May 2024",
       details: [
-        "Developed professional and responsive website for a local business to enhance their online presence.",
+        "Built the entire website using HTML, CSS, and JavaScript to create a clean, modern, and interactive user interface.",
+    "Implemented responsive design techniques with CSS media queries to ensure optimal display on desktops, tablets, and smartphones.",
+        "Collaborated with the client to iterate on design and functionality, ensuring the final product met business goals."
       ],
-      skills: ["CSS", "HTML", "JavaScript"],
-      logoImage: "/images/final-touch-ss.png",
-      images: "images/test.png",
+      skills: ["HTML", "CSS", "JavaScript", "Responsive Design", "UI/UX"],
+      logoImage: "/images/final-touch-thumbnail.png",
+      images: "",
       link: "https://github.com/GuneetGill/final_touch_finishing",
-      websiteLink: "www.finaltouchfinishing.ca",
-    },
+      websiteLink: "https://www.finaltouchfinishing.ca"
+    },    
     {
       title: "Forex Prediction Model",
       summary:
@@ -176,8 +214,8 @@ function Projects() {
         "Collected market sentiment, headlines, and economic data using real-time web scraping, and displayed data onto web application to provide comprehensive view of trading activities.",
       ],
       skills: ["Python", "Pandas", "Beautiful Soup", "Flask", "React"],
-      logoImage: "/images/forex-ss.png",
-      images: "images/test.png",
+      logoImage: "/images/forex-thumbnail.png",
+      images: "",
       link: "https://github.com/GuneetGill/Forex_Project",
     },
   ];
@@ -235,13 +273,15 @@ function Projects() {
                   ))}
                 </div>
 
-                <div className="project-imgs">
-                  <img
-                    className="project-logo"
-                    src={project.image}
-                    alt="Screenshot of the project interface"
-                  />
-                </div>
+                {project.images && (
+  <div className="project-imgs">
+    <img
+      className="project-logo"
+      src={project.images}
+      alt="Screenshot of the project interface"
+    />
+  </div>
+)}
 
                 <div className="links-section">
                   {project.link && (

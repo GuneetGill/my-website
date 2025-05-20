@@ -52,10 +52,6 @@
   }
 
 
-  .project-img-div{ 
-    
-  }
-
   .project-img{ 
     width: 100px;
     height: 80px;
@@ -105,4 +101,12 @@
   display: flex;
   padding: 0px;
   margin: 0px;
+}
+
+.time-period{
+  text-align: center;
+}
+
+.project-info-hidden{
+  margin-bottom: 10px;
 }
