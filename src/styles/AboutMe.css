@@ -1,5 +1,6 @@
 .AboutMe {
     font-size: 0; /* Removes whitespace between inline-block elements */
+    margin-bottom: 20px;
 }
 
 .paragraphs{

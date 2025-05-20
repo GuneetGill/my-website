@@ -17,8 +17,7 @@ import drawing9 from "../drawings/drawing9.json";
 import drawing10 from "../drawings/drawing10.json";
 import drawing11 from "../drawings/drawing11.json";
 import drawing12 from "../drawings/drawing12.json";
-import drawing13 from "../drawings/drawing13.json";
-import drawing14 from "../drawings/drawing14.json";
+
 
 
 function Header({ fabricCanvas }) {
@@ -29,7 +28,7 @@ function Header({ fabricCanvas }) {
   const drawings = [
     drawing0, drawing1, drawing2, drawing3, drawing4,
     drawing5, drawing6, drawing7, drawing8, drawing9,
-    drawing10, drawing11, drawing12, drawing13, drawing14,
+    drawing10, drawing11, drawing12
   ];
 
   // Set a consistent delay for all drawings (e.g., 1000ms)

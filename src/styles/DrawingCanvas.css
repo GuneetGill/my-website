@@ -5,6 +5,7 @@
   left: 0;
   width: 100vw; /*take up 100% of the viewport width and height*/
   height: auto;
+  /* height: 100vh; */
   z-index: 1; /*sit above all other componenets */
   pointer-events: none;
   cursor: crosshair;
