@@ -9,6 +9,14 @@
 .Projects h1{
     align-items: center;
   }
+
+  .project-capsule{
+    padding: 0.5rem;
+  }
+
+  .project-capsule:hover{
+    background-color: #f0f0f0;
+  }
   
   .project-container {
     z-index: 4;
@@ -24,10 +32,6 @@
     cursor: pointer;
   }
 
-  .project-item:hover{
-    transform: scale(1.05);
-  }
-
 
   /* the item that contains all the work stuff that is sometimes hidden */
   .project-info {
@@ -40,7 +44,10 @@
     flex-grow: 1;
   }
 
-
+  .project-info-hidden{
+    margin-bottom: 10px;
+  }
+  
   .project-title {
     margin: 0;
     padding: 0;
@@ -61,7 +68,7 @@
 
   .time-period {
     font-size: 16px;
-    color: gray;
+    color: #555555;
     margin-top: 5px;
   }
   
@@ -89,11 +96,11 @@
 }
 
 .skills-tag p {
-  background-color: #f0f0f0; 
+  background-color: #cccccc; 
   padding: 5px 10px; 
   border-radius: 20px; 
   font-size: 14px; 
-  color: #333; 
+  color: #555555;
   margin: 0; 
 }
 
@@ -103,10 +110,4 @@
   margin: 0px;
 }
 
-.time-period{
-  text-align: center;
-}
 
-.project-info-hidden{
-  margin-bottom: 10px;
-}

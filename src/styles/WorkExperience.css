@@ -25,12 +25,14 @@
   }
 
   .work-experience-item:hover{
-    transform: scale(1.05);
+    background-color: #f0f0f0;
+    /* transform: scale(1.05); */
   }
 
   /* one item in the bigger box */
  
   .logo-container {
+    margin-top: 5px;
     margin: 20px;
     margin-bottom: 5px;
     display: flex;
@@ -55,6 +57,7 @@
     flex-direction: column;
     margin:35px;
     margin-top: 10px;
+    margin-bottom: 0px;
   }
 
 
@@ -84,10 +87,10 @@
   /* the button for dropping down  */
 .dropdown-btn {
   display: flex;
-  justify-content: center; /* Horizontally center */
-  align-items: center;     /* Vertically center */
-  width: 100%;             /* Ensure it takes full width of the parent container */
-  padding: 5px;            /* Optional: add some padding if needed */
+  justify-content: center; 
+  align-items: center;     
+  width: 100%;            
+  padding: 1rem;         
 }
 
 .dropdown-btn-img {

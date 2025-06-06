@@ -219,131 +219,260 @@ function Projects() {
       link: "https://github.com/GuneetGill/Forex_Project",
     },
   ];
-  return (
-    <div className="Projects">
-      <h1>Projects</h1>
-      <div className="project-container">
-        {projectData.map((project, index) => (
-          <React.Fragment key={index}>
-            <div className="project-item" onClick={() => toggleDetails(index)}>
-              <div className="project-img-div">
-                <img
-                  className="project-img"
-                  src={project.logoImage}
-                  alt="img"
-                />
-              </div>
+//   return (
+//     <div className="Projects">
+//       <h1>Projects</h1>
+//       <div className="project-container">
+//         {projectData.map((project, index) => (
+//           <React.Fragment key={index}>
+//             <div className="project-item" onClick={() => toggleDetails(index)}>
+//               <div className="project-img-div">
+//                 <img
+//                   className="project-img"
+//                   src={project.logoImage}
+//                   alt="img"
+//                 />
+//               </div>
 
-              <div className="project-info">
-                <div className="project-title">
-                  <h3>{project.title}</h3>
-                </div>
-                <div className="project-description">
-                  <p>{project.summary}</p>
-                </div>
-              </div>
+//               <div className="project-info">
+//                 <div className="project-title">
+//                   <h3>{project.title}</h3>
+//                 </div>
+//                 <div className="project-description">
+//                   <p>{project.summary}</p>
+//                 </div>
+//               </div>
 
-              <div className="dropdown-btn-project">
-                <img
-                  src="images/logo2.png"
-                  alt="dropdown button"
-                  className={`dropdown-btn-img ${
-                    activeIndices.includes(index) ? "flipped" : ""
-                  }`}
-                />
+//               <div className="dropdown-btn-project">
+//                 <img
+//                   src="images/logo2.png"
+//                   alt="dropdown button"
+//                   className={`dropdown-btn-img ${
+//                     activeIndices.includes(index) ? "flipped" : ""
+//                   }`}
+//                 />
+//               </div>
+//             </div>
+
+//             {/* Moved OUTSIDE of .project-item */}
+//             {activeIndices.includes(index) && (
+//               <div className="project-info-hidden">
+//                 <p className="time-period">{project.timePeriod}</p>
+
+//                 <div className="project-description">
+//                   <ul>
+//                     {project.details.map((point, i) => (
+//                       <li key={i}>{point}</li>
+//                     ))}
+//                   </ul>
+//                 </div>
+
+//                 <div className="skills-tag">
+//                   {project.skills.map((skill, i) => (
+//                     <p key={i}>{skill}</p>
+//                   ))}
+//                 </div>
+
+//                 {project.images && (
+//   <div className="project-imgs">
+//     <img
+//       className="project-logo"
+//       src={project.images}
+//       alt="Screenshot of the project interface"
+//     />
+//   </div>
+// )}
+
+//                 <div className="links-section">
+//                   {project.link && (
+//                     <a
+//                       href={project.link}
+//                       target="_blank"
+//                       rel="noopener noreferrer"
+//                     >
+//                       <img
+//                         src="/images/github-logo.png"
+//                         alt="GitHub logo"
+//                         className="logo"
+//                       />
+//                     </a>
+//                   )}
+//                   {project.youtubeLink && (
+//                     <a
+//                       href={project.youtubeLink}
+//                       target="_blank"
+//                       rel="noopener noreferrer"
+//                     >
+//                       <img
+//                         src="/images/youtube-logo.png"
+//                         alt="YouTube logo"
+//                         className="logo"
+//                       />
+//                     </a>
+//                   )}
+//                   {project.devpostLink && (
+//                     <a
+//                       href={project.devpostLink}
+//                       target="_blank"
+//                       rel="noopener noreferrer"
+//                     >
+//                       <img
+//                         src="/images/devpost-logo.png"
+//                         alt="Devpost logo"
+//                         className="logo"
+//                       />
+//                     </a>
+//                   )}
+//                   {project.websiteLink && (
+//                     <a
+//                       href={project.websiteLink}
+//                       target="_blank"
+//                       rel="noopener noreferrer"
+//                     >
+//                       <img
+//                         src="/images/website-logo.png"
+//                         alt="website logo"
+//                         className="logo"
+//                       />
+//                     </a>
+//                   )}
+//                 </div>
+//               </div>
+//             )}
+//           </React.Fragment>
+//         ))}
+//       </div>
+//     </div>
+//   );
+// }
+
+// export default Projects;
+
+return (
+  <div className="Projects">
+    <h1>Projects</h1>
+    <div className="project-container">
+      {projectData.map((project, index) => (
+        <div className="project-capsule" key={index}>
+          <div className="project-item" onClick={() => toggleDetails(index)}>
+            <div className="project-img-div">
+              <img
+                className="project-img"
+                src={project.logoImage}
+                alt="img"
+              />
+            </div>
+
+            <div className="project-info">
+              <div className="project-title">
+                <h3>{project.title}</h3>
+              </div>
+              <div className="project-description">
+                <p>{project.summary}</p>
               </div>
             </div>
 
-            {/* Moved OUTSIDE of .project-item */}
-            {activeIndices.includes(index) && (
-              <div className="project-info-hidden">
-                <p className="time-period">{project.timePeriod}</p>
+            <div className="dropdown-btn-project">
+              <img
+                src="images/logo2.png"
+                alt="dropdown button"
+                className={`dropdown-btn-img ${
+                  activeIndices.includes(index) ? "flipped" : ""
+                }`}
+              />
+            </div>
+          </div>
 
-                <div className="project-description">
-                  <ul>
-                    {project.details.map((point, i) => (
-                      <li key={i}>{point}</li>
-                    ))}
-                  </ul>
-                </div>
+          {activeIndices.includes(index) && (
+            <div className="project-info-hidden">
+              <p className="time-period">{project.timePeriod}</p>
 
-                <div className="skills-tag">
-                  {project.skills.map((skill, i) => (
-                    <p key={i}>{skill}</p>
+              <div className="project-description">
+                <ul>
+                  {project.details.map((point, i) => (
+                    <li key={i}>{point}</li>
                   ))}
-                </div>
-
-                {project.images && (
-  <div className="project-imgs">
-    <img
-      className="project-logo"
-      src={project.images}
-      alt="Screenshot of the project interface"
-    />
-  </div>
-)}
-
-                <div className="links-section">
-                  {project.link && (
-                    <a
-                      href={project.link}
-                      target="_blank"
-                      rel="noopener noreferrer"
-                    >
-                      <img
-                        src="/images/github-logo.png"
-                        alt="GitHub logo"
-                        className="logo"
-                      />
-                    </a>
-                  )}
-                  {project.youtubeLink && (
-                    <a
-                      href={project.youtubeLink}
-                      target="_blank"
-                      rel="noopener noreferrer"
-                    >
-                      <img
-                        src="/images/youtube-logo.png"
-                        alt="YouTube logo"
-                        className="logo"
-                      />
-                    </a>
-                  )}
-                  {project.devpostLink && (
-                    <a
-                      href={project.devpostLink}
-                      target="_blank"
-                      rel="noopener noreferrer"
-                    >
-                      <img
-                        src="/images/devpost-logo.png"
-                        alt="Devpost logo"
-                        className="logo"
-                      />
-                    </a>
-                  )}
-                  {project.websiteLink && (
-                    <a
-                      href={project.websiteLink}
-                      target="_blank"
-                      rel="noopener noreferrer"
-                    >
-                      <img
-                        src="/images/website-logo.png"
-                        alt="website logo"
-                        className="logo"
-                      />
-                    </a>
-                  )}
-                </div>
+                </ul>
               </div>
-            )}
-          </React.Fragment>
-        ))}
-      </div>
+
+              <div className="skills-tag">
+                {project.skills.map((skill, i) => (
+                  <p key={i}>{skill}</p>
+                ))}
+              </div>
+
+              {project.images && (
+                <div className="project-imgs">
+                  <img
+                    className="project-logo"
+                    src={project.images}
+                    alt="Screenshot of the project interface"
+                  />
+                </div>
+              )}
+
+              <div className="links-section">
+                {project.link && (
+                  <a
+                    href={project.link}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                  >
+                    <img
+                      src="/images/github-logo.png"
+                      alt="GitHub logo"
+                      className="logo"
+                    />
+                  </a>
+                )}
+                {project.youtubeLink && (
+                  <a
+                    href={project.youtubeLink}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                  >
+                    <img
+                      src="/images/youtube-logo.png"
+                      alt="YouTube logo"
+                      className="logo"
+                    />
+                  </a>
+                )}
+                {project.devpostLink && (
+                  <a
+                    href={project.devpostLink}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                  >
+                    <img
+                      src="/images/devpost-logo.png"
+                      alt="Devpost logo"
+                      className="logo"
+                    />
+                  </a>
+                )}
+                {project.websiteLink && (
+                  <a
+                    href={project.websiteLink}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                  >
+                    <img
+                      src="/images/website-logo.png"
+                      alt="website logo"
+                      className="logo"
+                    />
+                  </a>
+                )}
+              </div>
+            </div>
+          )}
+        </div>
+      ))}
     </div>
-  );
-}
+  </div>
+);  // <-- Make sure this closing paren and semicolon exist
+}      // <-- closing bracket for your component function
 
 export default Projects;
+
