@@ -32,3 +32,10 @@
 .black{
   background-color: black;
 }
+
+/* hide color picker on smaller screens */
+@media (max-width: 770px) {
+  .Footer {
+    display: none;
+  }
+}

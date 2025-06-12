@@ -18,3 +18,18 @@ h1 {
   font-weight: 100;
   padding: 10px;
 }
+
+@media (max-width: 400px) {
+
+  .switch-container{
+    margin-left: auto;    
+    padding: 0;          
+    display: flex;
+    justify-content: flex-end;
+  }
+
+  .Header {
+    padding: 0 10px;      
+  }
+
+}
