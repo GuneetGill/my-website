@@ -33,9 +33,18 @@
   background-color: black;
 }
 
+.doodle-img {
+  height: 80px;
+  width: 110px;
+  margin-left: 17px;
+  margin-bottom: 10px;
+}
+
+
 /* hide color picker on smaller screens */
-@media (max-width: 770px) {
+@media (max-width: 1000px) {
   .Footer {
     display: none;
   }
 }
+

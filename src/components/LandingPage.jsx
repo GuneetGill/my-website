@@ -1,5 +1,6 @@
 import * as React from "react";
 import "../styles/LandingPage.css";
+import welcome from "../static-img/welcome.png";
 
 function LandingPage() {
   return (
@@ -32,8 +33,15 @@ function LandingPage() {
           </a>{" "}
           to download a copy of my resume!
         </p>
+        
       </div>
-      <img src="/images/my-drawing.png" alt="Description of image" />
+    
+<div className="image-container">
+    <img src="/images/my-drawing.png" alt="Drawing" className="drawing-img" />
+    <img src={welcome} className="welcome-img" alt="Welcome" />
+</div>
+
+
     </div>
   );
 }

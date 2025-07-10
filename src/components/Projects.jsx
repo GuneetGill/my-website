@@ -374,7 +374,7 @@ return (
 
             <div className="dropdown-btn-project">
               <img
-                src="images/logo2.png"
+                src="images/dropdown-arrow.png"
                 alt="dropdown button"
                 className={`dropdown-btn-img ${
                   activeIndices.includes(index) ? "flipped" : ""

@@ -43,7 +43,7 @@ function Leadership() {
 
           <div className="dropdown-btn">
             <img
-              src="images/logo2.png"
+              src="images/dropdown-arrow.png"
               alt="dropdown button"
               //appiles javascript so first we check if the the key for this div aka 0
               // is within the activeIndex array if it is then we apply the css class
@@ -94,7 +94,7 @@ function Leadership() {
          
           <div className="dropdown-btn">
             <img
-              src="images/logo2.png"
+              src="images/dropdown-arrow.png"
               alt="dropdown button"
               //appiles javascript so first we check if the the key for this div aka 0
               // is within the activeIndex array if it is then we apply the css class

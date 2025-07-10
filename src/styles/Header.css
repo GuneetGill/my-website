@@ -2,10 +2,9 @@
   position: relative;
   z-index: 2;
   cursor: pointer;
-  height: 20vh;
+  height: 15vh;
   display: flex;
-  justify-content: space-between;
-  align-items: center;
+  flex-direction: column; /* Stack children vertically */
 }
 
 h1 {
@@ -13,23 +12,40 @@ h1 {
   font-weight: 500;
 }
 
+.header-top {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%; /* Ensure it takes full width */
+}
+
+
+.tryme-img {
+  position: absolute;
+  top: 65px;
+  right: 120px;
+  width: 100px;
+  height: 60px;
+}
+
 .switch .MuiFormControlLabel-label {
   font-family: "Winky Sans", sans-serif;
   font-weight: 100;
   padding: 10px;
+  display: flex;
+  align-items: center;
 }
 
+/* Mobile styling */
 @media (max-width: 400px) {
+  .Header {
+    padding: 0 10px;
+  }
 
-  .switch-container{
-    margin-left: auto;    
-    padding: 0;          
+  .switch-container {
+    margin-left: auto;
+    padding: 0;
     display: flex;
     justify-content: flex-end;
   }
-
-  .Header {
-    padding: 0 10px;      
-  }
-
 }

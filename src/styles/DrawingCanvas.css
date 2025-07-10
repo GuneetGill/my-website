@@ -1,3 +1,7 @@
+/* .body{
+  cursor: url(../assets/images/pencil.png) 20 20 , auto;
+} */
+
 .Canvas {
   position: absolute; /*absolute is relative to parent container which is App so
   drawing stays where it was drawn */
@@ -7,11 +11,6 @@
   height: auto;
   /* height: 100vh; */
   z-index: 1; /*sit above all other componenets */
-  pointer-events: none;
-  cursor: crosshair;
-  /*helps capture mouse events for drawing if we want canvas
-  to be visable auto restores the default functionality (useful for use on child
-  elements of an element with pointer-events: none; specified*/
   }
   
   .Canvas canvas {

@@ -4,6 +4,8 @@ import Switch from "@mui/joy/Switch";
 import "../styles/Header.css";
 import * as fabric from "fabric";
 
+import tryme from "../static-img/tryme.png";
+
 import drawing0 from "../drawings/drawing0.json";
 import drawing1 from "../drawings/drawing1.json";
 import drawing2 from "../drawings/drawing2.json";
@@ -19,8 +21,10 @@ import drawing11 from "../drawings/drawing11.json";
 import drawing12 from "../drawings/drawing12.json";
 
 
-
 function Header({ fabricCanvas }) {
+
+ const fabricCanvasRef = useRef(null);
+ const canvasRef = useRef(null);
 
   const [checked, setChecked] = useState(true);
   const cancelRef = useRef(false); 
@@ -30,6 +34,7 @@ function Header({ fabricCanvas }) {
     drawing5, drawing6, drawing7, drawing8, drawing9,
     drawing10, drawing11, drawing12
   ];
+
 
   // Set a consistent delay for all drawings (e.g., 1000ms)
   const delayTime = 800;
@@ -73,29 +78,42 @@ function Header({ fabricCanvas }) {
     }
   };
 
-  
+
   return (
     <div className="Header">
-      <h1>Guneet Gill</h1>
+      <div className="header-top">
 
-      <span className="switch-container">
-        <FormControlLabel
-          className="switch"
-          control={
-            <Switch
-              checked={checked}
-              onChange={handleChange}
-              size="lg"
-              variant="solid"
-              color={checked ? "neutral" : "primary"}
-            />
-          }
-          label="Crazy Mode"
-        />
-      </span>
+        <h1>Guneet Gill</h1>
+  
+        <span className="switch-container">
+          <FormControlLabel
+            className="switch"
+            control={
+              <Switch
+                checked={checked}
+                onChange={handleChange}
+                size="lg"
+                variant="solid"
+                color={checked ? "neutral" : "primary"}
+              />
+            }
+            label="Crazy Mode"
+          />
+        </span>
+
+        <img src={tryme} className="tryme-img" />
+
+      </div>
+  
+      {/* <div className="tryme">
+        <img src={tryme} className="tryme-img" />
+      </div> */}
+
+
     </div>
   );
 }
+  export default Header;
 
-export default Header;
 
+ 

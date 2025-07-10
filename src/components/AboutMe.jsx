@@ -22,8 +22,8 @@ function AboutMe() {
       <div className="logo-collection">
         <a
           href="https://github.com/GuneetGill"
-          target="_blank"
-          rel="noopener noreferrer"
+          target="_blank" //open link in new tab
+          rel="noopener noreferrer" //always use it with _blank tag adds secuity and privacy
         >
           <img src="/images/github-logo.png" alt="GitHub logo" className="logo" />
         </a>

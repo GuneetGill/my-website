@@ -15,7 +15,7 @@ function App() {
   const [fabricCanvas, setFabricCanvas] = useState(null);
 
   return (
-    <div className="App">
+    <div className="App" >
       <DrawingCanvas selectedColor = {selectedColor} onCanvasReady={setFabricCanvas}/>
 
       <div className="main-content">
