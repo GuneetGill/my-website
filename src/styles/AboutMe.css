@@ -11,9 +11,9 @@
     display: inline-block;
     vertical-align: top;
     width: 45%;           /* Make sure they fit side by side */
-    margin: 0 2%;          /* Optional spacing */
-    font-size: 16px;       /* Reset font size after .AboutMe sets it to 0 */
-}
+    margin: 0 2%;          
+    font-size: 16px;
+}    
 
  .logo-collection {
     display: flex;

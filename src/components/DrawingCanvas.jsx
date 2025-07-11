@@ -1,5 +1,3 @@
-
-// export default DrawingCanvas;
 import { useState, useEffect, useRef } from "react";
 import "../styles/DrawingCanvas.css";
 import * as fabric from "fabric";
@@ -85,10 +83,6 @@ function DrawingCanvas({ selectedColor, onCanvasReady }) {
       clipPath: null,
     };
     
-    // myDrawings.forEach(drawing => {
-    //   combinedJSON.objects.push(...(drawing.objects || []));
-    //   // if you have backgrounds or overlays, handle merging too
-    // });
   
     fabricCanvas.loadFromJSON(combinedJSON)
       .then(canvas => {
@@ -99,10 +93,9 @@ function DrawingCanvas({ selectedColor, onCanvasReady }) {
         console.error("Failed to load drawing:", err);
       });
   }, []);
-  
 
 
-  // Function to save the drawing as JSON or SVG when the user presses the "S" key
+  // Function to save the drawing as JSON or PNG when the user presses the "S" key
   //  const handleKeyDown = (e) => {
   //   if (e.key === "s" || e.key === "S") {
 

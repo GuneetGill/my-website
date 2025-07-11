@@ -18,7 +18,6 @@
   background-color: #f0f0f0;
 }
 
-
 .hidden-info {
   padding: 1rem;
   margin-top: 1rem;
@@ -32,7 +31,6 @@
   z-index: 7;
   cursor: pointer;
 }
-
 
 .logo-container-club {
 display: flex;
@@ -55,14 +53,12 @@ margin-bottom: 15px;;
 font-size: 20px; 
 }
 
-
 .club-role{
   text-align: center;
   justify-content: center;
   font-size: 23px; 
   font-weight: 600;
 }
-
 
 .duration{
 color: gray;

@@ -36,13 +36,13 @@ function Header({ fabricCanvas }) {
   ];
 
 
-  // Set a consistent delay for all drawings (e.g., 1000ms)
+  // Set a consistent delay for all drawings in ms
   const delayTime = 800;
 
   // Load all drawings with delay between each
   const animateDrawings = async () => {
     for (let i = 0; i < drawings.length; i++) {
-      if (cancelRef.current) return //cancel animation
+      if (cancelRef.current) return 
       
       try 
       {
@@ -58,6 +58,7 @@ function Header({ fabricCanvas }) {
     }
   };
 
+  //logic for button on header 
   const handleChange = (event) => {
     setChecked(event.target.checked);
     console.log(event.target.checked);
@@ -74,6 +75,7 @@ function Header({ fabricCanvas }) {
     else{
       cancelRef.current = false;
       console.log("turn on")
+      //start animation 
       animateDrawings()
     }
   };
@@ -104,11 +106,6 @@ function Header({ fabricCanvas }) {
         <img src={tryme} className="tryme-img" />
 
       </div>
-  
-      {/* <div className="tryme">
-        <img src={tryme} className="tryme-img" />
-      </div> */}
-
 
     </div>
   );

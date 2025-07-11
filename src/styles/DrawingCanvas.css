@@ -1,7 +1,3 @@
-/* .body{
-  cursor: url(../assets/images/pencil.png) 20 20 , auto;
-} */
-
 .Canvas {
   position: absolute; /*absolute is relative to parent container which is App so
   drawing stays where it was drawn */

@@ -21,6 +21,7 @@ function WorkExperience() {
       <h1>Work Experience</h1>
 
       <div className="work-experience-container">
+        
         {/* Workday Section */}
         <div className="work-experience-item">
           <div className="logo-container" onClick={() => toggleDetails(0)}>

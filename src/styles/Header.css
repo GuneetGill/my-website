@@ -4,7 +4,7 @@
   cursor: pointer;
   height: 15vh;
   display: flex;
-  flex-direction: column; /* Stack children vertically */
+  flex-direction: column; 
 }
 
 h1 {
@@ -16,7 +16,7 @@ h1 {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  width: 100%; /* Ensure it takes full width */
+  width: 100%;
 }
 
 
