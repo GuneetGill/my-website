@@ -62,4 +62,19 @@
     width: 90%;  
     height: auto;
   }
+
+  .drawing-img {
+    width: 400px;
+    height: 500px;
+    margin: 30px;
+  }
+
+  .welcome-img {
+    position: absolute;
+    top: 80px;    
+    right: 63px;  
+    width: 150px;  
+    height: 120px;
+    z-index: 5;
+  }
 }

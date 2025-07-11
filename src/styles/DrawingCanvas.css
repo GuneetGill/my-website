@@ -15,3 +15,15 @@
   display: block;
   pointer-events: auto;
   }
+
+/* hide color picker on smaller screens */
+@media (max-width: 1000px) {
+  .Canvas {
+    display: none;
+  }
+
+  .Canvas canvas{
+    display: none;
+  }
+}
+
