@@ -37,7 +37,7 @@ h1 {
 }
 
 /* Mobile styling 400 */
-@media (max-width: 400px) { 
+@media (max-width: 1000px) { 
   .Header {
     padding: 0 10px;
   }
