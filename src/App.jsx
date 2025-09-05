@@ -1,4 +1,4 @@
-import React, { useState, Component } from "react";
+import React, { useState } from "react";
 import "./styles/App.css";
 import Header from "./components/Header";
 import LandingPage from "./components/LandingPage";
@@ -8,29 +8,30 @@ import Footer from "./components/Footer";
 import DrawingCanvas from "./components/DrawingCanvas";
 import AboutMe from "./components/AboutMe";
 import Leadership from "./components/Leadership";
+import { Analytics } from "@vercel/analytics/react"; // ✅ Import here
 
 function App() {
-  // State to store the currently selected brush color
-  const [selectedColor, setSelectedColor] = useState("#000000"); // Default black
+  const [selectedColor, setSelectedColor] = useState("#000000");
   const [fabricCanvas, setFabricCanvas] = useState(null);
 
   return (
-    <div className="App" >
-      <DrawingCanvas selectedColor = {selectedColor} onCanvasReady={setFabricCanvas}/>
+    <div className="App">
+      <DrawingCanvas selectedColor={selectedColor} onCanvasReady={setFabricCanvas} />
 
       <div className="main-content">
-        <Header fabricCanvas={fabricCanvas}/>
+        <Header fabricCanvas={fabricCanvas} />
         <LandingPage />
         <WorkExperience />
         <Projects />
-        <Leadership/>
-        <AboutMe/>
+        <Leadership />
+        <AboutMe />
       </div>
 
       <div className="footer">
-        <Footer setColor = {setSelectedColor} />
+        <Footer setColor={setSelectedColor} />
       </div>
 
+      <Analytics />
     </div>
   );
 }
