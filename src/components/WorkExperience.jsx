@@ -31,7 +31,7 @@ function WorkExperience() {
               className="company-logo"
             />
             <h3 className="role">
-              Software Application Development Intern @ Workday
+              Software Development Engineer Intern @ Workday
             </h3>
           </div>
           <div className="dropdown-btn">
