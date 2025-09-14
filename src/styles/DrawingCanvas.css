@@ -4,8 +4,8 @@
   top: 0; /* start from top left and extend outwards */
   left: 0;
   width: 100vw; /*take up 100% of the viewport width and height*/
-  height: auto;
-  /* height: 100vh; */
+  /* height: auto; */
+  height: 100%;
   z-index: 1; /*sit above all other componenets */
   }
   

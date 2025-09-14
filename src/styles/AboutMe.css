@@ -1,6 +1,5 @@
 .AboutMe {
     font-size: 0; /* Removes whitespace between inline-block elements */
-    margin-bottom: 20px;
 }
 
 .paragraphs{
@@ -28,7 +27,6 @@
     z-index: 6;
 } 
 
-
 .logo{
     display: inline-block;
     vertical-align: top;
@@ -47,7 +45,11 @@
         display: block;       
         width: 90%;           
         margin: 10px auto;  
-        
+    }
+
+    .logo-collection{
+        justify-content: center;
+        align-items: center;       
     }
 }
 

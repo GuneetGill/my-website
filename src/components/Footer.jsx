@@ -1,6 +1,4 @@
-import { useState, useEffect, useRef } from "react";
 import "../styles/Footer.css";
-import * as fabric from "fabric";
 
 import doodleimg from "../static-img/doodle.png";
 

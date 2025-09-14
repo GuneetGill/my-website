@@ -13,8 +13,21 @@ function DrawingCanvas({ selectedColor, onCanvasReady }) {
     const canvasElement = canvasRef.current;
 
     const getMainContentHeight = () => {
+
       const mainContent = document.querySelector(".main-content");
-      return mainContent ? mainContent.offsetHeight : window.innerHeight;
+      const footer = document.querySelector(".footer");
+      const mainHeight = mainContent ? mainContent.offsetHeight : 0;
+      const footerHeight = footer ? footer.offsetHeight : 0;
+
+  
+      console.log("Main height:", mainHeight);
+      console.log("Footer height:", footerHeight);
+      console.log("Footer offsetHeight:", footer?.offsetHeight);
+      console.log("Footer clientHeight:", footer?.clientHeight);
+      console.log("Footer scrollHeight:", footer?.scrollHeight);
+
+      return mainHeight + footerHeight;
+     
     };
 
     // Initial height based on main-content

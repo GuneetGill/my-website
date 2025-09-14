@@ -34,7 +34,7 @@ function WorkExperience() {
               Software Development Engineer Intern @ Workday
             </h3>
           </div>
-          <div className="dropdown-btn">
+          <div className="dropdown-btn" onClick={() => toggleDetails(0)}>
             <img
               src="images/dropdown-arrow.png"
               alt="dropdown button"
@@ -77,7 +77,7 @@ function WorkExperience() {
             />
             <h3 className="role">Software Engineering Intern @ Metalab</h3>
           </div>
-          <div className="dropdown-btn">
+          <div className="dropdown-btn" onClick={() => toggleDetails(1)}>
             <img
               src="images/dropdown-arrow.png"
               alt="dropdown button"
@@ -126,10 +126,10 @@ function WorkExperience() {
               className="company-logo"
             />
             <h3 className="role">
-              Non-Resident Officer @ Canada Revenue Agency
+              Non-Resident Tax Auditor @ Canada Revenue Agency
             </h3>
           </div>
-          <div className="dropdown-btn">
+          <div className="dropdown-btn" onClick={() => toggleDetails(2)}>
             <img
               src="images/dropdown-arrow.png"
               alt="dropdown button"

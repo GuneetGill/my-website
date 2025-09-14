@@ -8,7 +8,7 @@ import Footer from "./components/Footer";
 import DrawingCanvas from "./components/DrawingCanvas";
 import AboutMe from "./components/AboutMe";
 import Leadership from "./components/Leadership";
-import { Analytics } from "@vercel/analytics/react"; // ✅ Import here
+import { Analytics } from "@vercel/analytics/react"; 
 
 function App() {
   const [selectedColor, setSelectedColor] = useState("#000000");

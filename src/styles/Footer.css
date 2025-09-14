@@ -1,10 +1,12 @@
 .footer{
   z-index: 3;
+  height: auto; 
 }
 
 .Footer{
   position: relative;
   cursor: pointer;
+  margin: 50px;
 }
 
 .circle-btn {

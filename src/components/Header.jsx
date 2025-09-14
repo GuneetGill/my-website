@@ -37,7 +37,7 @@ function Header({ fabricCanvas }) {
 
 
   // Set a consistent delay for all drawings in ms
-  const delayTime = 800;
+  const delayTime = 300;
 
   // Load all drawings with delay between each
   const animateDrawings = async () => {
@@ -99,7 +99,7 @@ function Header({ fabricCanvas }) {
                 color={checked ? "neutral" : "primary"}
               />
             }
-            label="Crazy Mode"
+            label="Start Chaos"
           />
         </span>
 
