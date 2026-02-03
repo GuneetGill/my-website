@@ -54,7 +54,7 @@ function DrawingCanvas({ selectedColor, onCanvasReady }) {
       fabricCanvas.renderAll(); // important to refresh canvas after resize
     };
 
-    // fabricCanvas.freeDrawingCursor = 'url("/pencil.png") 2 2, auto';
+     fabricCanvas.freeDrawingCursor = 'url("/pencil.png") 2 2, auto';
 
 
     // Attach resize listener
