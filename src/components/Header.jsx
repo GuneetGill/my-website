@@ -1,8 +1,7 @@
-import { useState, useEffect, useRef } from "react";
+import { useState,useRef } from "react";
 import FormControlLabel from "@mui/material/FormControlLabel";
 import Switch from "@mui/joy/Switch";
 import "../styles/Header.css";
-import * as fabric from "fabric";
 
 import tryme from "../static-img/tryme.png";
 

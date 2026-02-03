@@ -1,4 +1,4 @@
-import { useState, useEffect, useRef } from "react";
+import {useEffect, useRef } from "react";
 import "../styles/DrawingCanvas.css";
 import * as fabric from "fabric";
 

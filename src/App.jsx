@@ -1,5 +1,4 @@
-import React, { useState } from "react";
-import "./styles/App.css";
+ import "./styles/App.css";
 import Header from "./components/Header";
 import LandingPage from "./components/LandingPage";
 import Projects from "./components/Projects";

@@ -1,4 +1,4 @@
-import * as React from "react";
+
 import "../styles/LandingPage.css";
 import welcome from "../static-img/welcome.png";
 
