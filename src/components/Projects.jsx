@@ -12,7 +12,7 @@ function Projects() {
 
   const projectData = [
     {
-      title: "Rate My Prof API/Chrome Extension - In Progress",
+      title: "Rate My Prof API/Chrome Extension",
       summary:
         "An API for RateMyProfessors and a Chrome extension that assists students in selecting courses.",
       timePeriod: "January - current",

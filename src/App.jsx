@@ -16,6 +16,8 @@ function App() {
 
   return (
     <div className="App">
+       
+
       <DrawingCanvas selectedColor={selectedColor} onCanvasReady={setFabricCanvas} />
 
       <div className="main-content">

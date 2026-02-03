@@ -1,7 +1,7 @@
 .Header {
   position: relative;
   z-index: 2;
-  cursor: pointer;
+  /* cursor: pointer; */
   height: 15vh;
   display: flex;
   flex-direction: column; 

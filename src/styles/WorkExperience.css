@@ -45,6 +45,11 @@
     height: auto;
     margin-right: 20px;
   }
+
+  .clio-logo-img{
+    width: 230px;
+    padding: 9px; 
+  }
   
   .role {
     font-size: 24px;
